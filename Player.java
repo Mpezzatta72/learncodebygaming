@@ -88,5 +88,7 @@ public class Player  {
     public Point getPos() {
         return pos;
     }
+    public void keyPressed(KeyEvent e) {
+    }
 }    
     

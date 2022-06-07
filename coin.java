@@ -6,10 +6,13 @@
   import java.io.IOException;
   import javax.imageio.ImageIO;
 
-  public class coin {
+  public class void coin {
+    
     private BufferedImage image;
+    
     private Point pos;
-    public void Coin(int x, int y) {
+    
+    public Coin(int x, int y) {
        
            loadImage();
         

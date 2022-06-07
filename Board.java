@@ -22,7 +22,7 @@ public class Board extends JPanel implements ActionListener, KeyListener {
     private Timer timer;
     // objects that appear on the game board
     private Player player;
-    private ArrayList coins;
+    private ArrayList Coins;
 
     public Board() {
         // set the game board size
@@ -32,7 +32,7 @@ public class Board extends JPanel implements ActionListener, KeyListener {
 
         // initialize the game state
         player = new Player();
-        coins = populateCoins();
+        Coins = populateCoins();
 
         // this timer will call the actionPerformed() method every DELAY ms
         timer = new Timer(DELAY, this);
@@ -67,10 +67,11 @@ public class Board extends JPanel implements ActionListener, KeyListener {
         // draw our graphics.
         drawBackground(g);
         drawScore(g);
-    
-        for (coins coin : coin) {
-            ((Player) coin).draw(g, this);
+        coins[] coins;
+        for (coins coin : coins){
+              coin.draw(g, this);
         }
+        
         player.draw(g, this);
 
         // this smooths out animations on some systems
@@ -163,7 +164,7 @@ public class Board extends JPanel implements ActionListener, KeyListener {
     private void collectCoins() {
         // allow player to pickup coins
         ArrayList collectedCoins = new ArrayList<>();
-        for (Coin coin : coins) {
+        for (coin coin : coins) {
             // if the player is on the same tile as a coin, collect it
             if (player.getPos().equals(coin.getPos())) {
                 // give the player some points for picking this up
